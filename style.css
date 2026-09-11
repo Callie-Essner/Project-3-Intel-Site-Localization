@@ -15,7 +15,7 @@ header {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	background: linear-gradient(to right, #1782cf, 	#004f8c);
+	background: linear-gradient(to right, #1782cf, #004f8c);
 }
 
 /* Keep the hero content comfortably sized on large screens. */
@@ -160,8 +160,8 @@ header p {
 }
 
 /* Center the timeline instructions beneath the cards. */
-body > p {
-	margin: 32px 0 24px;
+.timeline-section + p {
+	margin: 30px 0 24px;
 	text-align: center;
 	color: #52657a;
 }
@@ -198,6 +198,31 @@ body > p {
 	visibility: visible;
 }
 
+/* Use the Intel accent color for the Bootstrap buttons. */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus {
+	color: #ffffff;
+	background-color: #1782cf;
+	border-color: #1782cf;
+}
+
+/* Make the Learn More buttons clear with a thicker accent border. */
+.column-card .btn-primary,
+.column-card .btn-primary:hover,
+.column-card .btn-primary:focus {
+	color: #0068b5;
+	background-color: transparent;
+	border: 2px solid #0068b5;
+	border-radius: 0;
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.column-card .btn-primary:hover {
+	color: #ffffff;
+	background-color: #0068b5;
+}
+
 /* Keep the newsletter form separate from the timeline card styles. */
 .newsletter-section {
 	display: block;
@@ -205,6 +230,7 @@ body > p {
 	max-width: none;
 	margin: 0;
 	padding: 48px 24px;
+	background-color: #ffffff;
 	overflow: visible;
 }
 
@@ -218,6 +244,46 @@ body > p {
 	border: 0;
 	border-radius: 0;
 	box-shadow: none;
+}
+
+.newsletter-section h2 {
+	text-align: center;
+	margin-bottom: 24px;
+}
+
+.newsletter-section form {
+	width: 100%;
+	max-width: 760px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.newsletter-section .btn-primary {
+	width: auto;
+	padding: 8px 20px;
+	border-radius: 0;
+	transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.newsletter-section .btn-primary:hover {
+	background-color: #0068b5;
+	border-color: #0068b5;
+}
+
+/* Match the footer to the page background and keep its links readable. */
+footer {
+	background-color: #f4f7fb;
+	color: #17233c;
+}
+
+footer a {
+	color: #0068b5;
+	transition: color 0.2s ease;
+}
+
+footer a:hover {
+	color: #003b66;
+	text-decoration: underline;
 }
 
 /* Make the hero fit smaller screens without horizontal scrolling. */

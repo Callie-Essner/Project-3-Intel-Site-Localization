@@ -28,6 +28,7 @@
     </div>
   </header>
 
+  <main>
   <!-- Timeline Cards Section -->
   <section class="timeline-section">
 
@@ -148,7 +149,7 @@
 
       <!-- Column 1 -->
       <div class="col-12 col-md-4">
-        <div class="column-card h-100 p-4 border rounded bg-light">
+        <div class="column-card h-100 p-4">
         <h2>RISE Strategy</h2>
         <p>
           Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy,
@@ -156,13 +157,20 @@
           progress on climate action, water stewardship, and waste reduction.
         </p>
         <!-- Learn More Button -->
-        <a class="btn btn-primary" href="#">Learn More</a>
+        <button
+          class="btn btn-primary"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#riseModal"
+        >
+          Learn More
+        </button>
         </div>
       </div>
 
       <!-- Column 2 -->
       <div class="col-12 col-md-4">
-        <div class="column-card h-100 p-4 border rounded bg-light">
+        <div class="column-card h-100 p-4">
         <h2>Commitment</h2>
         <p>
           In 2022, Intel pledged to achieve net-zero greenhouse gas emissions
@@ -171,13 +179,20 @@
           industry.
         </p>
         <!-- Learn More Button -->
-        <a class="btn btn-primary" href="#">Learn More</a>
+        <button
+          class="btn btn-primary"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#commitmentModal"
+        >
+          Learn More
+        </button>
         </div>
       </div>
 
       <!-- Column 3 -->
       <div class="col-12 col-md-4">
-        <div class="column-card h-100 p-4 border rounded bg-light">
+        <div class="column-card h-100 p-4">
         <h2>Water &amp; Waste</h2>
         <p>
           Intel conserves billions of gallons of water annually and
@@ -186,7 +201,14 @@
           advance a circular economy.
         </p>
         <!-- Learn More Button -->
-        <a class="btn btn-primary" href="#">Learn More</a>
+        <button
+          class="btn btn-primary"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#waterWasteModal"
+        >
+          Learn More
+        </button>
         </div>
       </div>
 
@@ -220,19 +242,71 @@
     </div>
   </section>
 
+  <!-- Additional information displayed by the Learn More buttons. -->
+  <div class="modal fade" id="riseModal" tabindex="-1" aria-labelledby="riseModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="riseModalLabel">RISE Strategy</h2>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Intel's RISE strategy sets 2030 goals for climate action, water stewardship,
+          waste reduction, and responsible technology. It is designed to encourage
+          progress across Intel and throughout the semiconductor industry.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="commitmentModal" tabindex="-1" aria-labelledby="commitmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="commitmentModalLabel">Net-Zero Commitment</h2>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Intel has committed to achieving net-zero greenhouse gas emissions for
+          Scope 1 and Scope 2 emissions across its global operations by 2040.
+          The goal builds on decades of environmental initiatives and partnerships.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="waterWasteModal" tabindex="-1" aria-labelledby="waterWasteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="waterWasteModalLabel">Water &amp; Waste</h2>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Intel conserves billions of gallons of water and works with communities
+          to restore watersheds. The company also reuses, upcycles, and recycles
+          materials to reduce waste and support a circular economy.
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+
   <!-- Footer -->
-  <footer class="bg-dark text-white py-4 mt-5">
+  <footer class="py-4 mt-5">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
       <p class="mb-0">&copy; 2026 Intel Corporation. All rights reserved.</p>
       <nav aria-label="Footer navigation">
         <ul class="list-inline mb-0">
-          <li class="list-inline-item"><a class="link-light" href="#">Privacy Policy</a></li>
-          <li class="list-inline-item"><a class="link-light" href="#">Terms of Use</a></li>
-          <li class="list-inline-item"><a class="link-light" href="#">Contact</a></li>
+          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+          <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+          <li class="list-inline-item"><a href="#">Contact</a></li>
         </ul>
       </nav>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
     // Languages that are normally written from right to left.
